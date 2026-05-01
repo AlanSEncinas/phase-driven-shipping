@@ -1,6 +1,6 @@
 ---
 name: phase-driven-shipping
-description: Use when starting any work session, when user says "commit" / "done for today" / "ship it", when new ideas surface mid-phase, when user expresses self-doubt about progress, or before ending a work session.
+description: Use when starting any conversation — REQUIRED to invoke before any other response, including clarifying questions. Also use when user says "commit" / "done for today" / "ship it", when new ideas surface mid-phase, when user expresses self-doubt about progress, or before ending a work session.
 ---
 
 # Phase-Driven Shipping
@@ -30,13 +30,25 @@ Every project gets these three. If any are missing on first work in a project, p
 
 ## Morning Call (start of every session)
 
-Before any new work, output ≤10 lines:
+Before any new work, run the morning call. Behavior depends on what's in the working directory.
+
+**Case A — `BUILD_PLAN.md` exists in the working directory** (you're in a real project):
 
 1. Read `BUILD_PLAN.md` — what phase / current task?
 2. Read last 5 git commits — what shipped?
 3. Read memory — current project state?
 
-Report exactly: **where we are** (1 line) + **what shipped last** (1 line) + **today's concrete next action** (1 line). Stop. No work begins until the morning call is acknowledged.
+Report exactly: **where we are** (1 line) + **what shipped last** (1 line) + **today's concrete next action** (1 line). Stop. No new work begins until the morning call is acknowledged.
+
+**Case B — no `BUILD_PLAN.md` AND user is starting a real project** (asks to build, plan, design, code something new):
+
+Propose bootstrapping the `BUILD_PLAN.md` / `BACKLOG.md` / `CLAUDE.md` trio from the templates in this skill's directory before any work begins.
+
+**Case C — no `BUILD_PLAN.md` AND user has a one-off question or casual request** (asking how something works, asking for an explanation, requesting a small lookup):
+
+Output one short line: *"No project file detected — treating this as a one-off question. Ask anytime if you want me to bootstrap a project structure."* Then answer normally. Do not block. Do not force a morning call where there is no project to call about.
+
+In all three cases: the skill's other rules (trigger words, idea triage, doubt handler, session end) still apply when their conditions are matched.
 
 ## Routing Table — Hand Off to the Right Sub-Skill
 
