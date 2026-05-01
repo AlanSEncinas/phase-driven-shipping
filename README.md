@@ -45,16 +45,14 @@ Clone into your local Claude Code skills directory.
 **macOS / Linux:**
 ```bash
 cd ~/.claude/skills
-git clone https://github.com/encinas88/phase-driven-shipping.git
+git clone https://github.com/AlanSEncinas/phase-driven-shipping.git
 ```
 
 **Windows (PowerShell):**
 ```powershell
 cd "$env:USERPROFILE\.claude\skills"
-git clone https://github.com/encinas88/phase-driven-shipping.git
+git clone https://github.com/AlanSEncinas/phase-driven-shipping.git
 ```
-
-> Replace `encinas88` with the actual repo URL once published.
 
 The skill is auto-discovered by Claude Code on next session start.
 
